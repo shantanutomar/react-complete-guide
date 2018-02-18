@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -50,13 +50,13 @@ class App extends Component {
       font:"inherit"
     };
 
-    var classes = [];
+    var assignedClasses = [];
     if(this.state.persons.length <= 2){
-      classes.push("red");
+      assignedClasses.push(classes.red);
     }   
 
     if(this.state.persons.length <= 1){
-      classes.push("bold");
+      assignedClasses.push(classes.bold);
     }   
 
     let persons;
@@ -77,9 +77,9 @@ class App extends Component {
     }
 
     return (
-      <div className = "App">
+      <div className = {classes.App}>
         <h1>This is my react app</h1>
-        <p className = {classes.join(' ')}>This is a new paragraph. Let's check this out..!!</p>
+        <p className = {assignedClasses.join(' ')}>This is a new paragraph. Let's check this out..!!</p>
         <button onClick={this.hidePersons}
         style={style}>Toggle Persons</button>
         {persons}

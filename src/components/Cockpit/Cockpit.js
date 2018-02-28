@@ -18,6 +18,7 @@ var Cockpit = (props) => {
     <div className={classes.Cockpit}>
         <h1>{props.personTitle}</h1>
         <p className = {assignedClasses.join(' ')}>This is a new paragraph. Let's check this out..!!</p>
+        <p>Toggle click count is : {props.toggleCount}</p>
         <button onClick={props.clicked} className = {btnClass}>Toggle Persons</button>
     </div>
     );

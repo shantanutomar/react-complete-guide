@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Person from './Person/Person'
+import Person from './Person/Person';
+
 
 class Persons extends Component{
     render(){
@@ -8,7 +9,8 @@ class Persons extends Component{
         age={person.age} 
         click={() => this.props.clicked(index)}
         changeNameClick={(event) => this.props.changed(event, person.id)} /*Not clear */
-        key={person.id}/> 
+        key={person.id}
+        personId={index}/> 
     );
 };
 };
